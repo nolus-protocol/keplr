@@ -1,8 +1,8 @@
 import { AxiosRequestConfig } from "axios";
 
-export const COSMOS_RPC_ENDPOINT = "";
+export const COSMOS_RPC_ENDPOINT = "http://127.0.0.1:26657/";
 export const COSMOS_RPC_CONFIG: AxiosRequestConfig | undefined = undefined;
-export const COSMOS_REST_ENDPOINT = "";
+export const COSMOS_REST_ENDPOINT = "http://127.0.0.1:26657/";
 export const COSMOS_REST_CONFIG: AxiosRequestConfig | undefined = undefined;
 
 export const KAVA_RPC_ENDPOINT = "";

@@ -7,6 +7,10 @@ import {
   COSMOS_REST_ENDPOINT,
   COSMOS_RPC_CONFIG,
   COSMOS_RPC_ENDPOINT,
+  NOMO_REST_CONFIG,
+  NOMO_REST_ENDPOINT,
+  NOMO_RPC_CONFIG,
+  NOMO_RPC_ENDPOINT,
   OSMOSIS_REST_CONFIG,
   OSMOSIS_REST_ENDPOINT,
   OSMOSIS_RPC_CONFIG,
@@ -111,6 +115,50 @@ export const EmbedChainInfos: ChainInfo[] = [
       {
         coinDenom: "ATOM",
         coinMinimalDenom: "uatom",
+        coinDecimals: 6,
+        coinGeckoId: "cosmos",
+      },
+    ],
+    coinType: 118,
+    features: ["stargate", "ibc-transfer"],
+  },
+  {
+    rpc: NOMO_RPC_ENDPOINT,
+    rpcConfig: NOMO_RPC_CONFIG,
+    rest: NOMO_REST_ENDPOINT,
+    restConfig: NOMO_REST_CONFIG,
+    chainId: "nomo-private",
+    chainName: "Nomo",
+    stakeCurrency: {
+      coinDenom: "nomo",
+      coinMinimalDenom: "nomo",
+      coinDecimals: 6,
+      coinGeckoId: "nomo",
+    },
+    walletUrl:
+        process.env.NODE_ENV === "production"
+            ? "https://wallet.keplr.app/#/nomohub/stake"
+            : "http://localhost:8080/#/nomohub/stake",
+    walletUrlForStaking:
+        process.env.NODE_ENV === "production"
+            ? "https://wallet.keplr.app/#/nomohub/stake"
+            : "http://localhost:8080/#/nomohub/stake",
+    bip44: {
+      coinType: 118,
+    },
+    bech32Config: Bech32Address.defaultBech32Config("nomo"),
+    currencies: [
+      {
+        coinDenom: "nomo",
+        coinMinimalDenom: "nomo",
+        coinDecimals: 6,
+        coinGeckoId: "cosmos",
+      },
+    ],
+    feeCurrencies: [
+      {
+        coinDenom: "nomo",
+        coinMinimalDenom: "nomo",
         coinDecimals: 6,
         coinGeckoId: "cosmos",
       },
