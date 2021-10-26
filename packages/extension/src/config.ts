@@ -136,13 +136,13 @@ export const EmbedChainInfos: ChainInfo[] = [
       coinGeckoId: "nomo",
     },
     walletUrl:
-        process.env.NODE_ENV === "production"
-            ? "https://wallet.keplr.app/#/nomohub/stake"
-            : "http://localhost:8080/#/nomohub/stake",
+      process.env.NODE_ENV === "production"
+        ? "https://wallet.keplr.app/#/nomohub/stake"
+        : "http://localhost:8080/#/nomohub/stake",
     walletUrlForStaking:
-        process.env.NODE_ENV === "production"
-            ? "https://wallet.keplr.app/#/nomohub/stake"
-            : "http://localhost:8080/#/nomohub/stake",
+      process.env.NODE_ENV === "production"
+        ? "https://wallet.keplr.app/#/nomohub/stake"
+        : "http://localhost:8080/#/nomohub/stake",
     bip44: {
       coinType: 118,
     },
@@ -164,7 +164,7 @@ export const EmbedChainInfos: ChainInfo[] = [
       },
     ],
     coinType: 118,
-    features: ["stargate", "ibc-transfer"],
+    features: ["stargate", "ibc-transfer", "no-legacy-stdTx"],
   },
   {
     rpc: OSMOSIS_RPC_ENDPOINT,

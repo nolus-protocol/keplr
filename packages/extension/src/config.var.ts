@@ -5,7 +5,7 @@ export const COSMOS_RPC_CONFIG: AxiosRequestConfig | undefined = undefined;
 export const COSMOS_REST_ENDPOINT = "";
 export const COSMOS_REST_CONFIG: AxiosRequestConfig | undefined = undefined;
 
-export const NOMO_RPC_ENDPOINT = "127.0.0.1:26657";
+export const NOMO_RPC_ENDPOINT = "http://127.0.0.1:26657/";
 export const NOMO_RPC_CONFIG: AxiosRequestConfig | undefined = undefined;
 export const NOMO_REST_ENDPOINT = "http://127.0.0.1:1317";
 export const NOMO_REST_CONFIG: AxiosRequestConfig | undefined = undefined;
